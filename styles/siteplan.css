@@ -17,32 +17,32 @@ header {
 
 header img {
     grid-column: 1/2;
-    padding-left: 5px
+    padding-left: 5px;
 }
 
 header h1 {
     grid-column: 2/3;
     margin-left: 10px;
-    font-family: var(--main-font-family)
+    font-family: var(--main-font-family);
 }
 
 #hamburger:before {
-    content: "☰"
+    content: "☰";
 }
 
 #hamburger.open:before {
-    content: "X"
+    content: "X";
 }
 
 #hamburger {
     grid-column: 3/4;
     font-size: 2rem;
     border: 0;
-    background: none
+    background: none;
 }
 
 .navigation {
-    display: none
+    display: none;
 }
 
 .navigation.open {
@@ -50,7 +50,7 @@ header h1 {
     flex-direction: column;
     grid-column: 1/4;
     width: 100%;
-    padding: 0
+    padding: 0;
 }
 
 .navigation ul {
@@ -58,16 +58,16 @@ header h1 {
     padding: 0;
     margin: 0;
     width: 100%;
-    animation: appearance 1s ease-out
+    animation: appearance 1s ease-out;
 }
 
 @keyframes appearance {
     0% {
-        transform: translateY(-10px)
+        transform: translateY(-10px);
     }
 
     to {
-        transform: translateY(0)
+        transform: translateY(0);
     }
 }
 
@@ -75,74 +75,83 @@ header h1 {
     text-align: center;
     padding: 5px;
     font-size: 1.5rem;
-    border-bottom: 1px solid #fff
+    border-bottom: 1px solid #fff;
 }
 
 .navigation a {
     text-decoration: none;
-    color: var(--second-background-color)
+    color: var(--second-background-color);
 }
 
 .navigation a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .navigation li:last-child {
-    border-bottom: none
+    border-bottom: none;
 }
 
 .hero {
-    display: none
+    display: none;
 }
 
-.lists{
-    justify-items: center;
+.lists {
     border: 1px solid gray;
     margin: 1rem;
     border-radius: 10px;
+    padding: 1rem;
+    max-height: 40%;
+    background-color: var(--second-background-color);
+}
+
+.lists ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin: 0;
 }
 
 .lists li {
-    display: flex;
-    color: var(--color2);
-    margin: 1rem auto 0;
-    font-family: Parkisans;
+    color: var(--main-font-color);
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: var(--main-font-family);
     font-weight: 300;
-    font-style: normal;
 }
 
-#portal{
+#portal {
     box-sizing: border-box;
     max-width: 95%;
     margin: 0 auto;
 }
 
 h2 {
-    padding-left: 5px
+    padding-left: 5px;
 }
 
 .subt,
 h2 {
-    font-family: var(--main-font-family)
+    font-family: var(--main-font-family);
 }
 
 .subt {
     text-decoration: underline;
     background-color: var(--main-color);
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 table {
     margin: 0 auto;
     border-collapse: collapse;
-    padding-bottom: 1rem
+    padding-bottom: 1rem;
 }
 
 thead th {
     border: 1px solid #000;
     background-color: var(--main-color);
     color: var(--second-font-color);
-    padding: 1rem
+    padding: 1rem;
 }
 
 td,
@@ -154,11 +163,11 @@ th {
 }
 
 tbody tr:nth-last-child(2n) {
-    background-color: var(--second-background-color)
+    background-color: var(--second-background-color);
 }
 
 tbody tr:nth-child(odd) {
-    font-weight: 700
+    font-weight: 700;
 }
 
 dialog {
@@ -169,34 +178,34 @@ dialog {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     padding: 20px;
-    text-align: center
+    text-align: center;
 }
 
 ::backdrop {
-    background-color: rgba(0, 0, 0, .5)
+    background-color: rgba(0, 0, 0, .5);
 }
 
 dialog button {
     padding: 5px;
     color: var(--second-background-color);
     font-weight: 400;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
-.w-card{
+.w-card {
     margin: 1rem;
     border: 2px solid blue;
     border-radius: 8px;
     padding: 10px;
 }
 
-.w-card p{
+.w-card p {
     text-align: center;
 }
 
 dialog button,
 footer {
-    background-color: var(--main-color)
+    background-color: var(--main-color);
 }
 
 footer {
@@ -206,47 +215,47 @@ footer {
     font-family: var(--main-font-family);
     color: var(--main-background-color);
     font-weight: 700;
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .info {
     padding-left: 5px;
-    padding-top: 1rem
+    padding-top: 1rem;
 }
 
 .social {
     column-gap: 8px;
     padding-top: 5px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 .social,
 .social a {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .social a {
     width: 44px;
     height: 44px;
     border: 1px solid #ccc;
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .social img {
     width: 22px;
-    height: 22px
+    height: 22px;
 }
 
 .social a:hover {
-    transform: translateY(-7px)
+    transform: translateY(-7px);
 }
 
 .course {
     padding-left: 5px;
     padding-top: 5px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 
@@ -254,12 +263,12 @@ footer {
     header {
         display: grid;
         grid-template-columns: 60px auto auto;
-        padding: 1.25rem
+        padding: 1.25rem;
     }
 
     .navigation {
         display: flex;
-        grid-column: 3/4
+        grid-column: 3/4;
     }
 
     .navigation ul {
@@ -269,62 +278,54 @@ footer {
         padding: 0;
         animation: none;
         justify-content: end;
-        gap: 1rem
+        gap: 1rem;
     }
 
     .navigation li {
         border-bottom: none;
-        grid-column: 2/4
+        grid-column: 2/4;
     }
 
     #hamburger {
-        display: none
+        display: none;
     }
 
     main {
         display: grid;
         grid-template-columns: 0.5fr 2fr;
         gap: 2rem;
-        padding: 1rem
+        padding: 1rem;
     }
 
     #chrono,
     #portal {
-        grid-column: 2/3
-    }
-
-    .lists h3,
-    .lists ul {
-        display: block;
-        color: var(--main-font-color)
+        grid-column: 2/3;
     }
 
     .lists {
-        display: block;
         grid-column: 1/2;
-        background-color: var(--second-background-color);
+        
         border-radius: 10px;
         padding: 1rem;
-        justify-items: left;
-        color: var(--second-font-color)
+        margin: 0;
     }
 
     .hero {
         margin-left: auto;
         margin-right: auto;
-        border-radius: 50%
+        border-radius: 50%;
     }
 
     li a {
         text-decoration: none;
-        color: var(--main-font-color)
+        color: var(--main-font-color);
     }
 
     li a:hover {
-        text-decoration: underline
+        text-decoration: underline;
     }
 
-    .w-card{
+    .w-card {
         grid-column: 1/3;
     }
 }
