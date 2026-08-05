@@ -1,7 +1,10 @@
 body {
     margin: 0 auto;
     background-color: var(--main-background-color);
-    max-width: 640px;
+}
+
+header{
+    display: flex;
 }
 
 main{
@@ -139,11 +142,3 @@ h1{
 input[type='submit']:hover{
     transform: translateY(-3px);
 }
-
-/* footer {
-    background-color: var(--main-color);
-    padding: 2rem;
-    margin-top: 1rem;
-    text-align: center;
-    font-family: var(--main-font-family);
-} */
