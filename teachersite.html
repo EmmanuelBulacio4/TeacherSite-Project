@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Site</title>
+    <meta name="description" content="The site is aimed to teachers who need to check teacehrs books and be prepare to their classes.">
+    <meta name="author" content="WDD330 | Emmanuel Bulacio">
+    <link rel="icon" href="images/fav-icon.png">
+
+    <!-- GOOGLE FONTS LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300&display=swap&subset=latin" rel="stylesheet">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="School Classroom Site">
+    <meta property="og:description" content="The site is aimed to teachers who need to check teacehrs books and be prepare to their classes.">
+    <meta property="og:image" content="https://emmanuelbulacio4.github.io/wdd231/final/teacher-index-og.jpg">
+    <meta property="og:url" content="https://emmanuelbulacio4.github.io/wdd231/final/teachersite.html">
+
+    <!-- SCRIPTS -->
+    <script src="scripts/teachersite.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="icon" src="images/hat-icon.svg" alt="a graduation hat icon" width="50" height="50">
+        <h1>School Classroom</h1>
+        <button aria-label="Menu Button" id="hamburger"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a class="current" href="index.html">Home</a></li>
+                <li><a href="teachersite.html">Teachers</a></li>
+                <li><a href="bannerapp.html">Banner</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="viewer">
+        <h2>Teacher Site</h2>
+        <div class="lists">
+            <ul id="classes">
+                <li><a class="not-yet room7" href="#">Class 7</a> (soon)</li>
+                <li><a class="not-yet room6" href="#">Class 6</a> (soon)</li>
+                <li><a class="room5" href="#">Class 5</a></li>
+                <li><a class="room4" href="#">Class 4</a></li>
+                <li><a class="not-yet room3" href="#">Class 3</a> (soon)</li>
+                <li><a class="not-yet room2" href="#">Class 2</a> (soon)</li>
+                <li><a class="not-yet room1" href="#">Class 1</a> (soon)</li>
+            </ul>
+        </div>
+        <img class="hero" src="images/default500x1000.webp" alt="a little dog inviting to choose the class" loading="lazy" width="250">
+        <div id="portal"></div>
+        <dialog id="coming-soon">
+            <h2>🚨🚨NOTICE🚨🚨</h2>
+            <p>We are working on lunching this feature.</p>
+            <button id="closeModal">CLOSE</button>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <p><a href="#" target="_blank">Video Demostration</a></p>
+        </div>
+
+        <div class="social">
+            <a href="https://youtube.com" target="_blank"><img src="images/youtube.svg" alt="YouTube Logo" width="16"
+                    height="16"></a>
+            <a href="https://www.x.com" target="_blank"><img src="images/twitter.svg" alt="Twitter Logo" width="16"
+                    height="16"></a>
+            <a href="https://www.linkedin.com/in/emmanuel-bulacio/" target="_blank"><img src="images/linkedin.svg"
+                    alt="LinkeIn Logo" width="16" height="16"></a>
+        </div>
+
+        <div>
+            <p>&<span id="currentyear"></span> Emmanuel Bulacio - Salta, Argentina</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+
+    </footer>
+</body>
+</html>

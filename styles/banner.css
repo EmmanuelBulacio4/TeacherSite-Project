@@ -1,0 +1,149 @@
+body {
+    margin: 0 auto;
+    background-color: var(--main-background-color);
+    max-width: 640px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.sponsor{
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.application{
+    grid-column: 1/2;
+    justify-items: center;
+}
+
+.application label{
+    display: block;
+    text-align: left;
+}
+
+.application textarea{
+    display: block;
+    margin-bottom: 1rem;
+    padding: 5px;
+    padding-bottom: 3rem;
+    text-align: start;
+    width: 60%;
+}
+
+.application button{
+    display: block;
+    padding: 1rem;
+    font-family: var(--main-font-family);
+    background-color: var(--main-color);
+    color: var(--main-background-color);
+    font-weight: bold;
+    border-radius: 5px;
+    width: 40%;
+}
+
+ul{
+    background-color: var(--second-background-color);
+    columns: 3;
+    column-width: auto;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+li{
+    padding: 5px;
+    list-style-type: none;
+    margin: 5px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--main-font-family);
+}
+
+/* Banner App */
+h1{
+    background-color: var(--main-color);
+    padding: 1rem;
+    color: var(--second-font-color);
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.msg{
+    font-family: var(--main-font-family);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.appButton:hover{
+    transform: translateY(-3px);
+}
+
+/* --------Form-------- */
+.wf1 {
+    background-color: rgb(149, 204, 252);
+    max-width: 400px;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.wf1 fieldset {
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.wf1 label {
+    display: block;
+    box-sizing: border-box;
+    font-family: var(--main-font-family);
+}
+
+.wf1 input[type="text"] {
+    display: block;
+    padding: 0.75rem;
+    width: 70%;
+    border-radius: 6px;
+    background-color: rgb(242, 228, 228);
+}
+
+.wf1 textarea {
+    display: block;
+    padding: 1.75rem;
+    width: 60%;
+    background-color: rgb(242, 228, 228);
+}
+
+
+.wf1 input[type="submit"] {
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    padding: 1rem;
+    width: 90%;
+    max-width: 350px;
+    margin: 0rem 5% 2rem 5%;
+    background-color: var(--main-color);
+    color: white;
+    font-family: var(--main-font-family);
+    font-weight: 500;
+}
+
+input[type='submit']:hover{
+    transform: translateY(-3px);
+}
+
+/* footer {
+    background-color: var(--main-color);
+    padding: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: var(--main-font-family);
+} */

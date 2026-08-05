@@ -1,0 +1,74 @@
+@media screen and (min-width:640px) {
+    header {
+        display: grid;
+        grid-template-columns: 60px auto auto;
+        padding: 1.25rem
+    }
+
+    .navigation {
+        display: flex;
+        grid-column: 3/4
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        animation: none;
+        justify-content: end;
+        gap: 1rem
+    }
+
+    .navigation li {
+        border-bottom: none;
+        grid-column: 2/4
+    }
+
+    #hamburger {
+        display: none
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        padding: 1rem
+    }
+
+    #chrono,
+    #portal {
+        grid-column: 2/3
+    }
+
+    .lists h3,
+    .lists ul {
+        display: block;
+        color: var(--main-font-color)
+    }
+
+    .lists {
+        display: block;
+        grid-column: 1/2;
+        background-color: var(--second-background-color);
+        border-radius: 10px;
+        padding: 1rem;
+        justify-items: left;
+        color: var(--second-font-color)
+    }
+
+    .hero {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%
+    }
+
+    li a {
+        text-decoration: none;
+        color: var(--main-font-color)
+    }
+
+    li a:hover {
+        text-decoration: underline
+    }
+}
