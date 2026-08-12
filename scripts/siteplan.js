@@ -1,4 +1,3 @@
-import { displayDates } from "./date.mjs";
 import { loadHeader, loadFooter } from "./headerFooter.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -6,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFooter();
 });
 
-displayDates();
 
 const stuTable = [
     {

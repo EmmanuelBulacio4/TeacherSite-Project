@@ -1,11 +1,7 @@
-import { loadHeader } from "./headerFooter.mjs";
-import { loadFooter } from "./headerFooter.mjs";
+import { loadHeader, loadFooter } from "./headerFooter.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     loadFooter();
 });
 
