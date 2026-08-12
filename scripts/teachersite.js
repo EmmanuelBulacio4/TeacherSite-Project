@@ -9,16 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFooter();
 });
 
-
-
-//Date to the footer
-// const today = new Date();
-// const year = today.getFullYear();
-// document.querySelector("#currentyear").textContent = year;
-// let lastModification = new Date(document.lastModified)
-// document.getElementById("lastModified").textContent = lastModification.toLocaleDateString("en-US");
-
-
 //Table for teaches
 
 const teacherTable = [

@@ -74,9 +74,6 @@ export async function loadFooter() {
             socialDiv.appendChild(a);
         });
 
-        const currentYearSpan = clone.querySelector("#currentyear");
-        currentYearSpan.textContent = new Date().getFullYear();
-
         const author = clone.querySelector("#author-info");
         author.textContent = `${data.author} - ${data.location}`;
 
