@@ -27,21 +27,21 @@
     <meta property="og:url" content="https://emmanuelbulacio4.github.io/wdd231/final/teachersite.html">
 
     <!-- SCRIPTS -->
-    <script src="scripts/teachersite.js" defer></script>
+    <script src="scripts/teachersite.js" type="module"></script>
 </head>
 
 <body>
-    <header>
-        <img id="icon" src="images/hat-icon.svg" alt="a graduation hat icon" width="50" height="50">
-        <h1>School Classroom</h1>
-        <button aria-label="Menu Button" id="hamburger"></button>
-        <nav id="nav-bar" class="navigation">
-            <ul>
-                <li><a class="current" href="index.html">Home</a></li>
-                <li><a href="teachersite.html">Teachers</a></li>
-                <li><a href="bannerapp.html">Banner</a></li>
-            </ul>
-        </nav>
+    <header id="header">
+    
+        <template id="header-template">
+            <img id="icon" width="50" height="50">
+            <h1 id="title"></h1>
+            <button aria-label="Menu Button" id="hamburger"></button>
+            <nav id="nav-bar" class="navigation">
+                <ul id="nav-list">
+                </ul>
+            </nav>
+        </template>
     </header>
 
     <main class="viewer">

@@ -1,0 +1,23 @@
+{
+    "logo": {
+        "src": "images/hat-icon.svg",
+        "alt": "a graduation hat icon",
+        "width":"50",
+        "height":"50"
+    },
+    "title": "School Classroom",
+    "navigation": [
+        {
+            "text": "Home",
+            "url": "index.html"
+        },
+        {
+            "text": "Teachers",
+            "url": "teachersite.html"
+        },
+        {
+            "text": "Banner",
+            "url": "bannerapp.html"
+        }
+    ]
+}

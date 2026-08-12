@@ -1,13 +1,10 @@
 import { displayDates } from "./date.mjs";
+import { loadHeader } from "./headerFooter.mjs";
+
 displayDates();
 
-//hamburguer button
-const burgerButton = document.querySelector('#hamburger');
-const navigation = document.querySelector('#nav-bar');
-
-burgerButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    burgerButton.classList.toggle('open');
+document.addEventListener("DOMContentLoaded", () => {
+    loadHeader();
 });
 
 const stuTable = [
@@ -429,3 +426,6 @@ function DisplayForecast(dataFore) {
 }
 
 forecastWeather(saltaFore);
+
+
+
