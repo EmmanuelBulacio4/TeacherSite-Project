@@ -13,8 +13,10 @@
     <!-- GOOGLE FONTS LINKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
     <!-- CSS FILES -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/siteplan.css">
@@ -32,7 +34,7 @@
 
 <body>
     <header id="header">
-    
+
         <template id="header-template">
             <img id="icon" width="50" height="50">
             <h1 id="title"></h1>
@@ -66,24 +68,21 @@
             <button id="closeModal">CLOSE</button>
         </dialog>
     </main>
-    <footer>
-        <div>
-            <p><a href="#" target="_blank">Video Demostration</a></p>
-        </div>
 
-        <div class="social">
-            <a href="https://youtube.com" target="_blank"><img src="images/youtube.svg" alt="YouTube Logo" width="16"
-                    height="16"></a>
-            <a href="https://www.x.com" target="_blank"><img src="images/twitter.svg" alt="Twitter Logo" width="16"
-                    height="16"></a>
-            <a href="https://www.linkedin.com/in/emmanuel-bulacio/" target="_blank"><img src="images/linkedin.svg"
-                    alt="LinkeIn Logo" width="16" height="16"></a>
-        </div>
+    <footer id="footer">
 
-        <div>
-            <p>&<span id="currentyear"></span> Emmanuel Bulacio - Salta, Argentina</p>
-            <p>Last Modification: <span id="lastModified"></span></p>
-        </div>
+        <template id="footer-template">
+            <div id="videodemo">
+                <p><a id="video-link" href="#" target="_blank">Video Demonstration</a></p>
+            </div>
+
+            <div class="social" id="social-link"></div>
+
+            <div>
+                <p>&copy; <span id="currentyear"></span> <span id="author-info"></span></p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </template>
 
     </footer>
 </body>

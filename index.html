@@ -34,15 +34,7 @@
 <body>
     <header id="header">
 
-    <template id="header-template">
-        <img id="icon" width="50" height="50">
-        <h1 id="title"></h1>
-        <button aria-label="Menu Button" id="hamburger"></button>
-        <nav id="nav-bar" class="navigation">
-            <ul id="nav-list">
-            </ul>
-        </nav>
-    </template>
+        
     </header>
 
     <main class="viewer">
@@ -79,26 +71,29 @@
         </div>
     </main>
 
-    <footer>
-        <div id="videoDemo">
-            <p><a href="#" target="_blank">Video Demostration</a></p>
-        </div>
+    <footer id="footer"></footer>
 
-        <div class="social">
-            <a href="https://youtube.com" target="_blank"><img src="images/youtube.svg" alt="YouTube Logo" width="16"
-                    height="16"></a>
-            <a href="https://www.x.com" target="_blank"><img src="images/twitter.svg" alt="Twitter Logo" width="16"
-                    height="16"></a>
-            <a href="https://www.linkedin.com/in/emmanuel-bulacio/" target="_blank"><img src="images/linkedin.svg"
-                    alt="LinkeIn Logo" width="16" height="16"></a>
-        </div>
+    <template id="header-template">
+        <img id="icon" width="50" height="50">
+        <h1 id="title"></h1>
+        <button aria-label="Menu Button" id="hamburger"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul id="nav-list">
+            </ul>
+        </nav>
+    </template>
 
+    <template id="footer-template">
+        <div id="videodemo">
+        <p><a id="video-link" href="#" target="_blank">Video Demonstration</a><p>
+        </div>
+        <div class="social" id="social-link"></div>
         <div>
-            <p>&<span id="currentyear"></span> Emmanuel Bulacio - Salta, Argentina</p>
+            <p>&copy; <span id="currentyear"></span> <span id="author-info"></span></p>
             <p>Last Modification: <span id="lastModified"></span></p>
         </div>
+    </template>
 
-    </footer>
 </body>
 
 </html>

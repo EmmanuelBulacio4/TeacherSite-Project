@@ -1,0 +1,31 @@
+{
+    "videoDemo": {
+        "text": "Watch the Video Demostration",
+        "url": "#"
+    },
+    "socials": [
+        {
+            "name": "YouTube Logo",
+            "url": "https://youtube.com",
+            "icon": "images/youtube.svg",
+            "width": 16,
+            "height": 16
+        },
+        {
+            "name": "Twitter Logo",
+            "url": "https://www.x.com",
+            "icon": "images/twitter.svg",
+            "width": 16,
+            "height": 16
+        },
+        {
+            "name": "LinkedIn Logo",
+            "url": "https://www.linkedin.com/in/emmanuel-bulacio/",
+            "icon": "images/linkedin.svg",
+            "width": 16,
+            "height": 16
+        }
+    ],
+    "author": "Emmanuel Bulacio",
+    "location": "Salta, Argentina"
+}

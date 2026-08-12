@@ -1,11 +1,12 @@
 import { displayDates } from "./date.mjs";
-import { loadHeader } from "./headerFooter.mjs";
-
-displayDates();
+import { loadHeader, loadFooter } from "./headerFooter.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
+    loadFooter();
 });
+
+displayDates();
 
 const stuTable = [
     {
@@ -426,6 +427,3 @@ function DisplayForecast(dataFore) {
 }
 
 forecastWeather(saltaFore);
-
-
-
