@@ -28,8 +28,8 @@ export async function findVideos(query) {
             const li = document.createElement("li");
             li.style.marginBottom = "10px";
             li.innerHTML = `
-            <img src="${thumbnailUrl}" alt="${videoTitle}" style="vertical-align: middle; margin-right: 10px;">
-            <a href="${videoUrl}" target="_blank"><strong>${videoTitle}</strong></a>`;
+            <img src="${thumbnailUrl}" alt="${videoTitle}">
+            <a href="${videoUrl}" target="_blank">${videoTitle}</a>`;
             resultsList.appendChild(li);
         });
 

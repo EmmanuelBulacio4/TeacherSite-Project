@@ -36,9 +36,9 @@ export async function searchBooks(query) {
             li.style.alignItems = 'center';
             li.style.marginBottom = '12px';
             li.innerHTML = `
-            <img src="${coverImg}" alt="${title}" style="width: 45px; height: 60px; margin-right: 12px; object-fit: cover;">
+            <img src="${coverImg}" alt="${title}">
             <div>
-                <strong>${title}</strong> (${year})<br>
+                ${title} (${year})<br>
                 <small>Author: ${author}</small>
             </div>`;
 
