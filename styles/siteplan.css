@@ -137,10 +137,11 @@ h2 {
 .subt,
 h2 {
     font-family: var(--main-font-family);
+    text-align: center;
+    text-decoration: underline;
 }
 
 .subt {
-    text-decoration: underline;
     background-color: var(--main-color);
     border-radius: 4px;
 }
@@ -197,13 +198,10 @@ dialog button {
     border-radius: 5px;
 }
 
-.w-card {
-    margin: 1rem;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    padding: 10px;
+h3{
+    border-top: 1px solid grey;
+    padding-top: 5px;
 }
-
 .w-card p {
     text-align: center;
 }

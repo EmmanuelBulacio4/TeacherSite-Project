@@ -1,9 +1,13 @@
 import { loadHeader, loadFooter } from "./headerFooter.mjs";
+// import { forecastWeather } from "./siteplan.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
-    loadFooter();
+    loadFooter()
 });
+
+// forecastWeather();
+
 
 //Table for teaches
 
@@ -422,7 +426,6 @@ const teacherTable = [
         </table>`
     }];
 
-
 const tableShown = document.getElementById("portal");
 
 //Default View
@@ -437,7 +440,6 @@ const election5 = document.querySelector(".room5")
 election5.addEventListener("click", () => {
     tableShown.innerHTML = teacherTable[1].fifth;
 });
-
 
 //-----DIALOG-----
 const modal = document.getElementById('coming-soon');

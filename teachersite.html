@@ -32,23 +32,13 @@
 </head>
 
 <body>
-    <header id="header">
-
-        <template id="header-template">
-            <img id="icon" width="50" height="50">
-            <h1 id="title"></h1>
-            <button aria-label="Menu Button" id="hamburger"></button>
-            <nav id="nav-bar" class="navigation">
-                <ul id="nav-list">
-                </ul>
-            </nav>
-        </template>
-    </header>
+    <header id="header"></header>
 
     <main class="viewer">
         <h2>Teacher Site</h2>
         <div class="lists">
             <ul id="classes">
+                <li><a class="not-yet room7" href="#">Class 7 (soon)</a></li>
                 <li><a class="not-yet room7" href="#">Class 7 (soon)</a></li>
                 <li><a class="not-yet room6" href="#">Class 6 (soon)</a></li>
                 <li><a class="room5" href="#">Class 5</a></li>
@@ -57,6 +47,15 @@
                 <li><a class="not-yet room2" href="#">Class 2 (soon)</a></li>
                 <li><a class="not-yet room1" href="#">Class 1 (soon)</a></li>
             </ul>
+            <div class="w-card">
+                <h3>Forecast</h3>
+                <p id="done"></p>
+                <p id="one"></p><br>
+                <p id="dtwo"></p>
+                <p id="two"></p><br>
+                <p id="dthree"></p>
+                <p id="three"></p><br>
+            </div>
         </div>
         <img class="hero" src="images/default500x1000.webp" alt="a little dog inviting to choose the class"
             loading="lazy" width="250">
@@ -68,21 +67,31 @@
         </dialog>
     </main>
 
-    <footer id="footer">
+    <footer id="footer"></footer>
 
-        <template id="footer-template">
-            <div id="videodemo">
-                <p><a id="video-link" href="#" target="_blank">Video Demonstration</a></p>
-            </div>
+    <template id="footer-template">
+        <div id="videodemo">
+            <p><a id="video-link" href="#" target="_blank">Video Demonstration</a></p>
+        </div>
 
-            <div class="social" id="social-link"></div>
+        <div class="social" id="social-link"></div>
 
-            <div>
-                <p>&copy; <span id="currentyear"></span> <span id="author-info"></span></p>
-            </div>
-        </template>
+        <div>
+            <p>&copy; <span id="currentyear"></span> <span id="author-info"></span></p>
+        </div>
+    </template>
 
-    </footer>
+    <template id="header-template">
+        <img id="icon" width="50" height="50">
+        <h1 id="title"></h1>
+        <button aria-label="Menu Button" id="hamburger"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul id="nav-list">
+            </ul>
+        </nav>
+    </template>
+
+
 </body>
 
 </html>
