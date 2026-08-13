@@ -3,33 +3,32 @@ body {
     background-color: var(--main-background-color);
 }
 
-header{
+header {
     display: flex;
 }
 
-main{
+main {
     display: grid;
     grid-template-columns: 1fr;
-    
 }
 
-.sponsor{
+.sponsor {
     width: auto;
     max-width: 100%;
     margin: 0 auto;
 }
 
-.application{
+.application {
     grid-column: 1/2;
     justify-items: center;
 }
 
-.application label{
+.application label {
     display: block;
     text-align: left;
 }
 
-.application textarea{
+.application textarea {
     display: block;
     margin-bottom: 1rem;
     padding: 5px;
@@ -38,7 +37,7 @@ main{
     width: 60%;
 }
 
-.application button{
+.application button {
     display: block;
     padding: 1rem;
     font-family: var(--main-font-family);
@@ -49,7 +48,7 @@ main{
     width: 40%;
 }
 
-ul{
+ul {
     background-color: var(--second-background-color);
     columns: 3;
     column-width: auto;
@@ -57,7 +56,7 @@ ul{
     border-radius: 10px;
 }
 
-li{
+li {
     padding: 5px;
     list-style-type: none;
     margin: 5px;
@@ -70,22 +69,21 @@ h3 {
 }
 
 /* Banner App */
-h1{
+h1 {
     background-color: var(--main-color);
     padding: 1rem;
     color: var(--second-font-color);
     text-align: center;
     font-weight: 500;
-
 }
 
-.msg{
+.msg {
     font-family: var(--main-font-family);
     text-align: center;
     font-size: 1.5rem;
 }
 
-.appButton:hover{
+.appButton:hover {
     transform: translateY(-3px);
 }
 
@@ -125,7 +123,6 @@ h1{
     background-color: rgb(242, 228, 228);
 }
 
-
 .wf1 input[type="submit"] {
     margin-bottom: 1rem;
     border-radius: 6px;
@@ -139,6 +136,6 @@ h1{
     font-weight: 500;
 }
 
-input[type='submit']:hover{
+input[type='submit']:hover {
     transform: translateY(-3px);
 }

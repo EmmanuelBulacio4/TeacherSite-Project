@@ -17,16 +17,16 @@ header {
 
 header img {
     grid-column: 1/2;
-    padding-left: 5px
+    padding-left: 5px;
 }
 
 header h1 {
     grid-column: 2/3;
     margin-left: 10px;
-    font-family: var(--main-font-family)
+    font-family: var(--main-font-family);
 }
 
-.review-notice{
+.review-notice {
     background-color: rgb(224, 188, 188);
     margin: 5px;
     border: 1px solid black;
@@ -34,12 +34,12 @@ header h1 {
     padding: 5px;
 }
 
-.review-notice h2{
+.review-notice h2 {
     text-decoration: underline;
 }
 
 footer {
-    background-color: var(--main-color)
+    background-color: var(--main-color);
 }
 
 footer {
@@ -49,60 +49,59 @@ footer {
     font-family: var(--main-font-family);
     color: var(--main-background-color);
     font-weight: 700;
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .info {
     padding-left: 5px;
-    padding-top: 1rem
+    padding-top: 1rem;
 }
 
 .social {
     column-gap: 8px;
     padding-top: 5px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 .social,
 .social a {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .social a {
     width: 44px;
     height: 44px;
     border: 1px solid #ccc;
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .social img {
     width: 22px;
-    height: 22px
+    height: 22px;
 }
 
 .social a:hover {
-    transform: translateY(-7px)
+    transform: translateY(-7px);
 }
 
 .course {
     padding-left: 5px;
     padding-top: 5px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
-
 
 @media screen and (min-width:640px) {
     header {
         display: grid;
         grid-template-columns: 60px auto auto;
-        padding: 1.25rem
+        padding: 1.25rem;
     }
 
-    .review-notice{
+    .review-notice {
         max-width: 60%;
         margin: 0 auto;
         margin-top: 10px;
-
-}}
+    }
+}
