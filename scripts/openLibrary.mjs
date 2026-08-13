@@ -3,7 +3,6 @@ export async function searchBooks(query) {
     const spinner = document.getElementById("spinner");
     const searchButton = document.getElementById("searchButton");
 
-    // 1. Limpiamos lista, mostramos spinner y deshabilitamos botón
     resultsList.innerHTML = "";
     spinner.classList.remove("hidden");
     searchButton.disabled = true;
@@ -18,13 +17,12 @@ export async function searchBooks(query) {
 
         const data = await response.json();
 
-        // 2. Control de resultados vacíos corregido
+
         if (!data.docs || data.docs.length === 0) {
             resultsList.innerHTML = '<li>No books found. Try again.</li>';
             return;
         }
 
-        // 3. Iteramos y creamos los elementos
         data.docs.forEach(book => {
             const title = book.title || "No title";
             const author = book.author_name ? book.author_name.join(', ') : "Unknown Author";

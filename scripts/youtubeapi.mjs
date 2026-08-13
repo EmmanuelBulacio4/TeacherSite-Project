@@ -2,9 +2,9 @@
 
 export async function findVideos(query) {
 
-    document.getElementById('searchBtn').addEventListener('click', () => {
+    document.getElementById('searchBtn').addEventListener("click", () => {
         const query = document.getElementById('searchInput').value;
-        if (query.trim() !== '') {
+        if (query.trim() !== "") {
             findVideos(query);
         }
     });
@@ -16,7 +16,7 @@ export async function findVideos(query) {
         const response = await fetch(url);
         const data = await response.json();
 
-        const resultsList = document.getElementById('resultsList');
+        const resultsList = document.getElementById("resultsList");
         resultsList.innerHTML = '';
 
         data.items.forEach(item => {
@@ -25,8 +25,8 @@ export async function findVideos(query) {
             const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
             const thumbnailUrl = item.snippet.thumbnails.default.url;
 
-            const li = document.createElement('li');
-            li.style.marginBottom = '10px';
+            const li = document.createElement("li");
+            li.style.marginBottom = "10px";
             li.innerHTML = `
             <img src="${thumbnailUrl}" alt="${videoTitle}" style="vertical-align: middle; margin-right: 10px;">
             <a href="${videoUrl}" target="_blank"><strong>${videoTitle}</strong></a>`;
