@@ -1,8 +1,10 @@
 import { loadHeader, loadFooter } from "./headerFooter.mjs";
+import { findVideos } from "./youtubeapi.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
     loadFooter();
+    findVideos()
 });
 
 

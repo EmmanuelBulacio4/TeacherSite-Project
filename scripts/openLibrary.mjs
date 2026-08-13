@@ -1,9 +1,3 @@
-{/* <h2>Buscar Libros (Open Library)</h2>
-    <input type="text" id="searchInput" placeholder="Ej: javascript o cien años de soledad">
-    <button id="searchBtn">Buscar</button>
-
-  <ul id="resultsList" style="list-style: none; padding: 0;"></ul */}
-
 async function buscarLibros(query) {
     const resultsList = document.getElementById('resultsList');
     resultsList.innerHTML = '<li>Buscando...</li>';

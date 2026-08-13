@@ -1,22 +1,20 @@
-{/* <h2>Take a look in YouTube</h2>
-    <input type="text" id="searchInput" placeholder="Days of the week">
-    <button id="searchBtn">Buscar</button>
 
-  <ul id="resultsList"></ul> */}
 
-const API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza con tu clave de API
+export async function findVideos(query) {
+    
+    document.getElementById('searchBtn').addEventListener('click', () => {
+        const query = document.getElementById('searchInput').value;
+        if (query.trim() !== '') {
+            findVideos(query);
+        }
+    });
 
-async function buscarVideos(query) {
+    const API_KEY = "AIzaSyAaszrGAhGYmyn8DXt9zkCO5J4A-2FkShY";
     // Endpoint de búsqueda (search)
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&maxResults=5&key=${API_KEY}`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&maxResults=6&key=${API_KEY}`;
 
     try {
         const response = await fetch(url);
-
-        if (!response.ok) {
-            throw new Error(`Error en la petición: ${response.status}`);
-        }
-
         const data = await response.json();
 
         // Limpiar resultados anteriores
@@ -43,14 +41,6 @@ async function buscarVideos(query) {
         console.error('Error al realizar la búsqueda:', error);
     }
 }
-
-// Event listener para el botón
-document.getElementById('searchBtn').addEventListener('click', () => {
-    const query = document.getElementById('searchInput').value;
-    if (query.trim() !== '') {
-        buscarVideos(query);
-    }
-});
 
 
 // JSON DEVUELTO POR LA API
