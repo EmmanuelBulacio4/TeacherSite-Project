@@ -1,7 +1,7 @@
 
 
 export async function findVideos(query) {
-    
+
     document.getElementById('searchBtn').addEventListener('click', () => {
         const query = document.getElementById('searchInput').value;
         if (query.trim() !== '') {
@@ -10,25 +10,21 @@ export async function findVideos(query) {
     });
 
     const API_KEY = "AIzaSyAaszrGAhGYmyn8DXt9zkCO5J4A-2FkShY";
-    // Endpoint de búsqueda (search)
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&maxResults=6&key=${API_KEY}`;
 
     try {
         const response = await fetch(url);
         const data = await response.json();
 
-        // Limpiar resultados anteriores
         const resultsList = document.getElementById('resultsList');
         resultsList.innerHTML = '';
 
-        // Recorrer los ítems devueltos en el JSON
         data.items.forEach(item => {
             const videoTitle = item.snippet.title;
             const videoId = item.id.videoId;
             const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
             const thumbnailUrl = item.snippet.thumbnails.default.url;
 
-            // Crear elemento li en la lista
             const li = document.createElement('li');
             li.style.marginBottom = '10px';
             li.innerHTML = `
@@ -38,12 +34,12 @@ export async function findVideos(query) {
         });
 
     } catch (error) {
-        console.error('Error al realizar la búsqueda:', error);
+        console.error('Error:', error);
     }
 }
 
 
-// JSON DEVUELTO POR LA API
+// JSON
 // {
 //     "kind": "youtube#videoListResponse",
 //     "etag": "a_1b2c3d4e5f...",
@@ -56,7 +52,7 @@ export async function findVideos(query) {
 //             "kind": "youtube#video",
 //             "etag": "x_9y8z7w6v...",
 //             "id": "dQw4w9WgXcQ",
-//             "snippet": {
+//             "snippet": {              //video metadata!!! 
 //                 "publishedAt": "2009-10-25T06:57:33Z",
 //                 "channelId": "UCuAXFkgai1x3BNIT4J92mcA",
 //                 "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
@@ -92,12 +88,6 @@ export async function findVideos(query) {
 
 // kind: Identifica el tipo de recurso que devolvió la API.
 
-//     pageInfo: Detalla cuántos resultados se encontraron y cuántos hay en la página actual.Si hay más páginas, suele incluir los campos nextPageToken y prevPageToken.
+// items: array of videos.
 
-//         items: Arreglo con la lista de resultados devueltos.
-
-//             id: Identificador único del recurso(ID del video, canal o lista).
-
-//                 snippet: Contiene la metadata principal: título, descripción, fecha de publicación, miniaturas(thumbnails), canal y etiquetas.
-
-//                     statistics: Métricas asociadas al recurso(vistas, me gusta, comentarios).
+// id: (video ID, channel or paylist)
