@@ -1,6 +1,3 @@
-import { displayDates } from "./date.mjs";
-displayDates(); 
-
 let counter = 0;
 window.addEventListener('DOMContentLoaded', function() {
     const label = document.querySelector("strong");
