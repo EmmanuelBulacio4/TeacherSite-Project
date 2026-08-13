@@ -73,7 +73,7 @@ header h1 {
     }
 }
 
-/* Spinner de carga */
+/* Load Spinner*/
 .spinner {
     width: 35px;
     height: 35px;
@@ -224,13 +224,14 @@ dialog button {
     border-radius: 5px;
 }
 
-h3{
+h3 {
     border-top: 1px solid grey;
     padding-top: 5px;
 }
-.w-card{
+
+.w-card {
     display: none;
-}   
+}
 
 .w-card p {
     text-align: center;
@@ -242,14 +243,57 @@ footer {
 }
 
 /* APIs */
-.api{
+.api {
     grid-column: 1/3;
+    border: 2px solid #000;
+    margin: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    font-family: var(--main-font-family);
+}
+
+.api h2 {
+    font-family: var(--main-font-family);
+    text-decoration: none;
+}
+
+.api input {
+    padding: 1rem;
     border: 1px solid #000;
+    border-radius: 0 5px 5px 5px;
+}
+
+.api button {
+    background-color: var(--main-color);
+    color: var(--second-font-color);
+    font-weight: 700;
+    padding: .7rem;
+    border-radius: 0 5px;
+}
+
+.api ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    padding: 0px;
+}
+
+.api li{
+    padding:5px;
+}
+
+/* YOUTUBE DATA API */
+
+#youtube img {
+    border-radius: 10px;
 }
 
 /* OPEN LIBRARY API*/
-
-/* YOUTUBE DATA API */
+#open-library div {
+    border: 1px solid green;
+}
 
 footer {
     display: block;
@@ -305,6 +349,7 @@ footer a {
     padding-bottom: 5px;
 }
 
+/* --------MEDIA QUERY-------- */
 @media screen and (min-width:640px) {
     header {
         display: grid;
@@ -368,6 +413,12 @@ footer a {
 
     li a:hover {
         text-decoration: underline;
+    }
+
+    .api ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .w-card {

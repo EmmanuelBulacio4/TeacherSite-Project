@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
     loadFooter();
     findVideos();
-    forecastWeather();
     searchBooks();
+    forecastWeather();
 });
 
 
