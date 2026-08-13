@@ -1,11 +1,13 @@
 import { loadHeader, loadFooter } from "./headerFooter.mjs";
 import { findVideos } from "./youtubeapi.mjs";
+import { searchBooks } from "./openLibrary.mjs"
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
     loadFooter();
     findVideos();
     forecastWeather();
+    searchBooks();
 });
 
 

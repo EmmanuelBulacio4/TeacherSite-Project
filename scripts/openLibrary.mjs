@@ -1,35 +1,37 @@
-async function buscarLibros(query) {
-    const resultsList = document.getElementById('resultsList');
-    resultsList.innerHTML = '<li>Buscando...</li>';
+export async function searchBooks(query) {
+    const resultsList = document.getElementById("resultsListBook");
+    const spinner = document.getElementById("spinner");
+    const searchButton = document.getElementById("searchButton");
 
-    // Construimos la URL con el término codificado
-    const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=5`;
+    // 1. Limpiamos lista, mostramos spinner y deshabilitamos botón
+    resultsList.innerHTML = "";
+    spinner.classList.remove("hidden");
+    searchButton.disabled = true;
+
+    const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=6`;
 
     try {
         const response = await fetch(url);
-
         if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
+            throw new Error(`Error: ${response.status}`);
         }
 
         const data = await response.json();
-        resultsList.innerHTML = '';
 
-        if (data.docs.length === 0) {
-            resultsList.innerHTML = '<li>No se encontraron libros.</li>';
+        // 2. Control de resultados vacíos corregido
+        if (!data.docs || data.docs.length === 0) {
+            resultsList.innerHTML = '<li>No books found. Try again.</li>';
             return;
         }
 
-        // Recorremos cada libro devuelto
+        // 3. Iteramos y creamos los elementos
         data.docs.forEach(book => {
-            const title = book.title || 'Sin título';
-            const author = book.author_name ? book.author_name.join(', ') : 'Autor desconocido';
-            const year = book.first_publish_year || 'Año N/A';
-
-            // Portada del libro (si tiene cover_i)
+            const title = book.title || "No title";
+            const author = book.author_name ? book.author_name.join(', ') : "Unknown Author";
+            const year = book.first_publish_year || "No year info";
             const coverImg = book.cover_i
                 ? `https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`
-                : 'https://via.placeholder.com/40x60?text=No+Cover';
+                : 'images/nocover.jpg';
 
             const li = document.createElement('li');
             li.style.display = 'flex';
@@ -39,46 +41,40 @@ async function buscarLibros(query) {
             <img src="${coverImg}" alt="${title}" style="width: 45px; height: 60px; margin-right: 12px; object-fit: cover;">
             <div>
                 <strong>${title}</strong> (${year})<br>
-                <small>Autor: ${author}</small>
+                <small>Author: ${author}</small>
             </div>`;
+
             resultsList.appendChild(li);
         });
 
     } catch (error) {
-        console.error('Error al consultar Open Library:', error);
-        resultsList.innerHTML = '<li>Ocurrió un error al realizar la búsqueda.</li>';
+        console.error('Error querying Open Library:', error);
+        resultsList.innerHTML = '<li>Error while looking for your book</li>';
+    } finally {
+        spinner.classList.add("hidden");
+        searchButton.disabled = false;
     }
 }
 
-document.getElementById('searchBtn').addEventListener('click', () => {
-    const query = document.getElementById('searchInput').value;
-    if (query.trim() !== '') {
-        buscarLibros(query);
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const bookInput = document.getElementById('bookInput');
+
+    if (searchButton && bookInput) {
+        searchButton.addEventListener('click', () => {
+            const query = bookInput.value.trim();
+            if (query !== '') {
+                searchBooks(query);
+            }
+        });
+
+        bookInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = bookInput.value.trim();
+                if (query !== '') {
+                    searchBooks(query);
+                }
+            }
+        });
     }
 });
-
-// JSON DEVUELTO POR LA API
-// {
-//     "numFound": 1420,
-//         "start": 0,
-//             "numFoundExact": true,
-//                 "docs": [
-//                     {
-//                         "key": "/works/OL82586W",
-//                         "title": "Harry Potter and the Philosopher's Stone",
-//                         "author_name": [
-//                             "J. K. Rowling"
-//                         ],
-//                         "first_publish_year": 1997,
-//                         "isbn": [
-//                             "9780747532699",
-//                             "0747532699"
-//                         ],
-//                         "cover_i": 10521270,
-//                         "language": [
-//                             "eng",
-//                             "spa"
-//                         ]
-//                     }
-//                 ]
-// }
