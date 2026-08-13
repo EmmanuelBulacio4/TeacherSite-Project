@@ -202,6 +202,10 @@ h3{
     border-top: 1px solid grey;
     padding-top: 5px;
 }
+.w-card{
+    display: none;
+}   
+
 .w-card p {
     text-align: center;
 }
@@ -341,6 +345,7 @@ footer a {
     }
 
     .w-card {
+        display: grid;
         grid-column: 1/3;
     }
 }
