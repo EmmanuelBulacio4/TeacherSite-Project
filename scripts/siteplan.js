@@ -391,10 +391,7 @@ closeDialog.addEventListener('click', ()=>{
 });
 
 // ------WEATHER-----
-
-
-
-export async function forecastWeather() {
+async function forecastWeather() {
     try {
         const saltaFore = `https://api.openweathermap.org/data/2.5/forecast?lat=-24.79&lon=-65.44&appid=902647b55a8f06d112512d2e9c5051f8&units=metric`;
         const response = await fetch(saltaFore);

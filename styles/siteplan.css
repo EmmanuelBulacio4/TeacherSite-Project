@@ -104,7 +104,7 @@ header h1 {
     margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
-    max-height: 40%;
+    max-height: 60%;
     background-color: var(--second-background-color);
 }
 
